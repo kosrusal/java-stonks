@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Анализ свечных графиков"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <!-- Выбор компании -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выберите компанию:"
+                android:textSize="16sp"
+                android:paddingBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/companySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"/>
+
+            <EditText
+                android:id="@+id/customFigiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Или введите FIGI вручную"
+                android:visibility="gone"
+                android:paddingTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Выбор интервала -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выберите интервал:"
+                android:textSize="16sp"
+                android:paddingBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/intervalSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"/>
+        </LinearLayout>
+
+        <!-- Чекбокс для Ишимоку -->
+        <CheckBox
+            android:id="@+id/showIchimokuCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Показать Ишимоку"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Кнопка загрузки -->
+        <Button
+            android:id="@+id/loadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Загрузить данные"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/purple"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Прогресс-бар -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Контейнер для графика -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Свечной график"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <FrameLayout
+            android:id="@+id/chartFrame"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/white"
+            android:padding="4dp"/>
+
+        <!-- Контейнер для таблицы -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Последние свечи"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="8dp"/>
+
+        <FrameLayout
+            android:id="@+id/tableFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+</ScrollView>

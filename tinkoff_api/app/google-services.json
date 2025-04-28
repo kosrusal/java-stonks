@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "783554641987",
+    "project_id": "ishimoku-db37a",
+    "storage_bucket": "ishimoku-db37a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783554641987:android:31d7e4ce180564984814f6",
+        "android_client_info": {
+          "package_name": "com.example.myapplication.ishimoku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIGc8SJ9DpsnGeFb_sTmMmyT8PahINHF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
